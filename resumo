@@ -1,0 +1,26 @@
+listsalarios= [1000, 3000, 1000, 5000, 4000, 9000]
+
+
+#calcular media, variance e depois desvio padrao - ok
+mean = sum(listsalarios) / len(listsalarios)
+print(f'media é {mean}')
+var = sum((l-mean)**2 for l in listsalarios) / len(listsalarios)
+print(f'variancia é {var}')
+st_dev = math.sqrt(var)
+print(f'desvio padrao é {st_dev}')
+
+#calcular media - dp; media + dp - ok
+u = mean - st_dev
+print(f'media menos o desvio padrao é {u}')
+u1 = mean + st_dev
+print(f'media mais o desvio padrao é {u1}')
+
+#calcular media geometrica; media harmonica - ok
+mediag = statistics.geometric_mean(listsalarios)
+print(f'media geometrica é {mediag}')
+medianh = statistics.harmonic_mean(listsalarios)
+print(f'media harmonica é {medianh}')
+
+#calcular O primeiro, segundo, terceiro quartis - ok
+quar = statistics.quantiles(listsalarios)
+print(f'O primeiro, segundo, terceiro quartis {quar}')
