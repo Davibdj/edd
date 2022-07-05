@@ -1,0 +1,27 @@
+= open('mateus.txt', 'r')
+texto = f.readlines()
+a = 0
+while a < len(texto):
+    if texto[a] == '\n':
+        local = texto.index(texto[a])
+        texto.pop(local)
+    else:
+        texto[a] = texto[a].split(' ')
+        a += 1
+for i in texto:
+    local = texto.index(i)
+    for b in i:
+        local2 = texto[local].index(b)
+        if "\n" in b:
+            texto[local][local2] = b.replace("\n", '')
+lista1 = texto
+print(lista1)
+def bubble_sort(lista):
+    n = len(lista)
+    for j in range(n- 1):
+        for i in range(n- 1):
+            if lista[i] > lista[i + 1]:
+                # troca de elementos nas posições i e i+1
+                lista[i], lista[i + 1] = lista[i + 1], lista[i]
+bubble_sort(lista1)
+print(lista1)
