@@ -1,0 +1,7 @@
+Pedro 60 1000
+Joao 22 3000
+Maria 30 1000
+Ana 50 5000
+Beatriz 33 4000
+Carol 56 9000
+
